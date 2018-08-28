@@ -1,0 +1,10 @@
+.component-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.component-container {
+    background-color: gray;
+    width: 200px;
+    height: 100px;    
+}
