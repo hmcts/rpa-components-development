@@ -24,8 +24,39 @@ TODO - will probably use ng-packagr and the Angular library mechanism in the Ang
 
 ### Component backend service invocation
 
-TODO - we could have a proxy component which all service requests are routed through, through some command object.  Or each frontend component might have its necessary backend component proxies embedded on the page too (in a non-renderable way).  TBD.
+TODO - we could have a proxy component which all service requests are routed through, through some command object.  Or each frontend component might have its necessary backend component proxies embedded on the page too (in a non-renderable way).  TBD.  Note:  this might extend in to a packaging piece too depending upon the outcome/lessons learned etc.
 
 ### Application state management
 
 TODO - we might use Redux to hold all application state cross-components and should tie this into routable links (maybe we go through the same route which is an "application state management" route or something similar. TBD.
+
+## Running the Parts of the PoC
+
+### Running the sandbox application
+
+The **sandbox application** is the initial app which hosts 2 components.  It is a "standard" Angular app.  To run it, do this:
+
+```
+cd myapp
+ng serve -o
+```
+
+A browser will open at ``http://localhost:4200/`` with hot reload configured.  There are two (ugly!) components:  Person List and Person Details.  Person List currently has one link.  When this link is clicked, it uses RxJS to publish an event which the Person Details component is listening for.  The event is the text entered in the textbox.  When Person Details receives this event, it displays the text entered in its component.
+
+Note:  this is incredibly simple and just allows us to focus on the communication mechanism without gettng sidetracked on anything else.
+
+### Packaging and installing the component
+
+TODO - we'll script this and put instructions here.  The script will install to a local npm registry.
+
+### Reusing and importing the component
+
+TODO - we'll detail how we can import and install the component into a fresh Angular app here.
+
+### Running the backend services
+
+TODO - we'll detail how to run the backend services the components will use here.
+
+### Accessing/configuring the backend services in the components
+
+TODO - we'll detail any extra steps we need to do to "plug the backend" part in.  to a component.
