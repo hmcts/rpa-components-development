@@ -36,6 +36,14 @@ TODO - we might use Redux to hold all application state cross-components and sho
 
 The **sandbox application** is the initial app which hosts 2 components.  It is a "standard" Angular app.  To run it, do this:
 
+* Install the app's dependencies:
+
+```
+npm install
+```
+
+* Run the application:
+
 ```
 cd myapp
 ng serve -o
